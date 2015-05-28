@@ -70,7 +70,7 @@ public class MovieResourceRESTService {
 
         try {
             validateMovie(movie);
-            registration.register(movie);
+            registration.add(movie);
             builder = Response.ok();
         } catch (ConstraintViolationException ce) {
             // Bean validation issues

@@ -42,7 +42,7 @@ public class MovieRegistrationTest {
     	movie.setName("Jurassic Park");
     	movie.setYear(1993);
     	movie.setDirector("Steven Spielberg");
-        movieRegistration.register(movie);
+        movieRegistration.add(movie);
         assertNotNull(movie.getId());
         log.info(movie.getName() + " was persisted with id " + movie.getId());
     }

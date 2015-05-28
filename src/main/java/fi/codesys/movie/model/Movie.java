@@ -14,6 +14,8 @@ import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @SuppressWarnings("serial")
 @Entity
 @XmlRootElement
@@ -25,6 +27,7 @@ public class Movie implements Serializable {
     private Long id;
 
     @NotNull
+    @NotEmpty
     private String name;
 
     @NotNull

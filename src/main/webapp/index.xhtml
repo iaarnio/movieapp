@@ -3,7 +3,7 @@
     xmlns:ui="http://java.sun.com/jsf/facelets"
     xmlns:f="http://java.sun.com/jsf/core"
     xmlns:h="http://java.sun.com/jsf/html"
-    template="/WEB-INF/templates/default.xhtml">
+    template="template.xhtml">
     <ui:define name="content">
         <h:form id="reg" class="form">
             <h2>Movie maintenance</h2>
@@ -24,9 +24,7 @@
 
             <p>
                 <h:panelGrid columns="2">
-                    <h:commandButton id="register"
-                        action="#{movieController.register}"
-                        value="Register" styleClass="register" />
+                    <h:commandButton id="add" action="#{movieController.add}" value="Add"/>
                     <h:messages styleClass="messages"
                         errorClass="invalid" infoClass="valid"
                         warnClass="warning" globalOnly="true" />
@@ -61,11 +59,11 @@
             <h:column>
                 <f:facet name="header">REST URL</f:facet>
                 <a
-                    href="#{request.contextPath}/api/movies/#{_movie.id}">/api/movies/#{_movie.id}</a>
+                    href="#{request.contextPath}/api/movies/#{_movie.id}" target="_blank">/api/movies/#{_movie.id}</a>
             </h:column>
             <f:facet name="footer">
             REST URL for all movies: <a
-                    href="#{request.contextPath}/api/movies">/api/movies</a>
+                    href="#{request.contextPath}/api/movies" target="_blank">/api/movies</a>
             </f:facet>
         </h:dataTable>
     </ui:define>

@@ -1,2 +1,3 @@
 -- Seed DB for startup
-insert into Member (id, name, year, directory) values (0, 'Jurassic Park', 1993, 'Steven Spielberg') 
+insert into movie (id, name, year, director) values (0, 'Avengers: Age of Ultron', 2015, 'Joss Whedon') 
+--insert into movie (id, name, year, director) values (1, 'Jurassic Park', 1993, 'Steven Spielberg')

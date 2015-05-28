@@ -3,6 +3,8 @@ A simple movie cataloging application
 
 ## Demo 
 Live demo of the application is available at [https://movieapp-pilvi.rhcloud.com](https://movieapp-pilvi.rhcloud.com)
+
+![Screenshot](misc/screenshot.jpg)
     
 ## Technical stuff 
 

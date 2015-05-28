@@ -20,8 +20,8 @@ public class MovieRegistration {
     @Inject
     private Event<Movie> movieEventSrc;
 
-    public void register(Movie movie) throws Exception {
-        log.info("Registering " + movie.getName());
+    public void add(Movie movie) throws Exception {
+        log.info("Adding " + movie.getName());
         em.persist(movie);
         movieEventSrc.fire(movie);
     }

@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <title>MovieApp</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<h:outputStylesheet name="css/style.css"/>
+</h:head>
+
+<h:body>
+
+<div id="page">
+	<div id="header"></div>
+	
+	<div id="mainarea">
+		<div id="sidebar">
+			<div id="headerleft" />
+			<div id="menulinks">
+				<h:form>
+					<h:commandLink class="#{page.isActivePage('movies') ? 'active' : ''}" value="Movies" action="#{movieController.init}"/>
+					<h:commandLink class="#{page.isActivePage('about') ? 'active' : ''}" value="About" action="#{aboutController.init}"/>
+				</h:form>
+			</div>
+		</div>
+		
+		<div id="contentarea">
+	    	<ui:insert name="content">
+		  	</ui:insert>
+		</div>
+		
+		<div id="footer">
+			<p>Application created by Codesys. Template design originated from http://www.openwebdesign.org</p>
+		</div>
+	</div>
+</div>
+
+</h:body>
+</html>
