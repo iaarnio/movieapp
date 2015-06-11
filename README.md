@@ -2,7 +2,8 @@
 A simple movie cataloging application
 
 ## Demo 
-Live demo of the application is available at [https://movieapp-pilvi.rhcloud.com](https://movieapp-pilvi.rhcloud.com)
+Live demo of the application is available at [https://movieapp-pilvi.rhcloud.com/index.jsf](https://movieapp-pilvi.rhcloud.com/index.jsf)
+(If it doesn't respond please wait a min and retry)
 
 ![Screenshot](misc/screenshot.jpg)
     
@@ -18,5 +19,3 @@ Live demo of the application is available at [https://movieapp-pilvi.rhcloud.com
 - Wildfly 8.2
 - Maven
 - H2 in-memory DB
-
-
