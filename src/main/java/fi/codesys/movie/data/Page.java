@@ -29,7 +29,7 @@ public class Page implements Serializable {
     }
 
     public boolean isActivePage(String page) {
-    	System.out.println("isActivePage");
+    	System.out.println("isActivePage : " + page + " : " + activePage.equals(page));
         return activePage.equals(page);
     }
 }
