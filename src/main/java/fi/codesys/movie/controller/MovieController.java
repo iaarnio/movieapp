@@ -29,30 +29,33 @@ public class MovieController {
 
     @Inject
     private Logger log;
-    
+
     @Produces
     @Named
     private Movie movie;
 
-    public void init() {
-    	initMovie();
-    	setPage();
-	    try {
-	        facesContext.getExternalContext().redirect("index.jsf");
-	    } catch (IOException ex) {
-	        log.severe("Redirection failed: " + ex.toString());
-	    }    
-    } 
-
     @PostConstruct
+    public void init() {
+    	System.out.println("movie.init");
+        initMovie();
+        setPage();
+//        try {
+//            facesContext.getExternalContext().redirect("index.jsf");
+//        } catch (IOException ex) {
+//            log.severe("Redirection failed: " + ex.toString());
+//        }
+    }
+
     public void initMovie() {
+    	System.out.println("initMovie");
         movie = new Movie();
     }
 
     public void setPage() {
-        page.setActivePage("movies");
+    	System.out.println("movie.setPage");
+        page.setActivePage("catalog");
     }
-    
+
     public void add() throws Exception {
         try {
             movieRegistration.add(movie);

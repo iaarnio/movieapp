@@ -10,22 +10,26 @@ import javax.inject.Named;
 @Named
 public class Page implements Serializable {
 
-	private String activePage;
-	
+    private String activePage;
+
     @PostConstruct
     public void initPage() {
-    	activePage = "movies";
+    	System.out.println("initPage");
+        activePage = "catalog";
     }
 
-	public String getActivePage() {
-		return activePage;
-	}
+    public String getActivePage() {
+    	System.out.println("getActivePage");
+        return activePage;
+    }
 
-	public void setActivePage(String activePage) {
-		this.activePage = activePage;
-	}
-    
-	public boolean isActivePage(String page) {
-		return activePage.equals(page);
-	}
+    public void setActivePage(String activePage) {
+    	System.out.println("setActivePage: " + activePage);
+        this.activePage = activePage;
+    }
+
+    public boolean isActivePage(String page) {
+    	System.out.println("isActivePage");
+        return activePage.equals(page);
+    }
 }
