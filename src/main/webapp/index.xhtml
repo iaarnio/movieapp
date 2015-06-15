@@ -5,34 +5,43 @@
     xmlns:h="http://java.sun.com/jsf/html"
     template="template.xhtml">
 
+<!-- 
+    <f:event type="preRenderView" listener="#{movieController.init()}" />
+     -->
 <!--     
-    <f:event type="preRenderView" listener="#{movieController.init}" />
     <f:event type="preRenderView" listener="#{aboutController.foo}" />
      -->
     <ui:define name="content">
         <h:form id="reg" class="form">
-            <h2>Movie catalog</h2>
-            <h:panelGrid columns="3" columnClasses="titleCell">
-                <h:outputLabel for="name" value="Name:" />
-                <h:inputText id="name" value="#{movie.name}" />
-                <h:message for="name" errorClass="invalid" />
-
-                <h:outputLabel for="year" value="Year:" />
-                <h:inputText id="year" value="#{movie.year}" />
-                <h:message for="year" errorClass="invalid" />
-
-                <h:outputLabel for="director" value="Director:" />
-                <h:inputText id="director" value="#{movie.director}" />
-                <h:message for="director" errorClass="invalid" />
-            </h:panelGrid>
-
-            <h:panelGrid columns="2">
-                <h:commandButton id="add" action="#{movieController.add}" value="Add"/>
-                <h:messages styleClass="messages"
-                    errorClass="invalid" infoClass="valid"
-                    warnClass="warning" globalOnly="true" />
-            </h:panelGrid>
+            <h3 id="title">Movie catalog</h3>
+	    	<div class="row">
+	            <h:panelGrid columns="3" columnClasses="titleCell">
+	                <h:outputLabel for="name" value="Name:" />
+	                <h:inputText id="name" value="#{movie.name}" />
+	                <h:message for="name" errorClass="invalid" />
+	
+	                <h:outputLabel for="year" value="Year:" />
+	                <h:inputText id="year" value="#{movie.year}" />
+	                <h:message for="year" errorClass="invalid" />
+	
+	                <h:outputLabel for="director" value="Director:" />
+	                <h:inputText id="director" value="#{movie.director}" />
+	                <h:message for="director" errorClass="invalid" />
+	            </h:panelGrid>
+			</div>
+			
+			<br/>
+			
+	    	<div class="row">
+	            <h:panelGrid columns="2">
+	                <h:commandButton id="add" action="#{movieController.add}" styleClass="btn btn-primary" value="Add"/>
+	                <h:messages styleClass="messages"
+	                    errorClass="invalid" infoClass="valid"
+	                    warnClass="warning" globalOnly="true" />
+	            </h:panelGrid>
+            </div>
         </h:form>
+        
         <br />
 
         <h:panelGroup rendered="#{empty movies}">

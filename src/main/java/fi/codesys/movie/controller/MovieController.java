@@ -1,8 +1,5 @@
 package fi.codesys.movie.controller;
 
-import java.io.IOException;
-import java.util.logging.Logger;
-
 import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.Produces;
@@ -11,7 +8,6 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import fi.codesys.movie.data.Page;
 import fi.codesys.movie.model.Movie;
 import fi.codesys.movie.service.MovieRegistration;
 
@@ -24,36 +20,17 @@ public class MovieController {
     @Inject
     private MovieRegistration movieRegistration;
 
-    @Inject
-    private Page page;
-
-    @Inject
-    private Logger log;
-
     @Produces
     @Named
     private Movie movie;
 
-    @PostConstruct
     public void init() {
-    	System.out.println("movie.init");
         initMovie();
-        setPage();
-//        try {
-//            facesContext.getExternalContext().redirect("index.jsf");
-//        } catch (IOException ex) {
-//            log.severe("Redirection failed: " + ex.toString());
-//        }
     }
 
+    @PostConstruct
     public void initMovie() {
-    	System.out.println("initMovie");
         movie = new Movie();
-    }
-
-    public void setPage() {
-    	System.out.println("movie.setPage");
-        page.setActivePage("catalog");
     }
 
     public void add() throws Exception {

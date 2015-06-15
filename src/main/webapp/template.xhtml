@@ -15,28 +15,25 @@
 <h:body>
     <div id="holder" class="col-md-offset-1 col-md-10">
 	    <div id="main">
-	        <div id="sidemenu" class="col-md-3">
+	    	<div id="header">
 	            <img src="resources/images/movies.png" />
-
-	                <ul class="nav nav-pills nav-stacked">
-	                    <li role="presentation" class="#{page.isActivePage('catalog') ? 'active' : ''}">
-	                        <h:link outcome="index">Catalog</h:link>
-	                    </li>
-	
-	                    <li role="presentation" class="#{page.isActivePage('technology') ? 'active' : ''}">
-	                        <h:link outcome="about">Technology</h:link>
-	                    </li>
-	                    <!--
-	                    <li role="presentation" class="#{page.isActivePage('contact') ? 'active' : ''}">
-	                        <h:commandLink value="Contact" action="#{contactController.init}"/>
-	                    </li>
-	                    -->
-	
-	                </ul>
-
+            </div>
+            
+	        <div id="sidemenu" class="col-md-3">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="#{view.viewId == '/index.xhtml' ? 'active' : ''}">
+                        <h:link outcome="index">Catalog</h:link>
+                    </li>
+                    <li class="#{view.viewId == '/about.xhtml' ? 'active' : ''}">
+                        <h:link outcome="about">Technology</h:link>
+                    </li>
+                    <li class="#{view.viewId == '/contact.xhtml' ? 'active' : ''}">
+                        <h:link outcome="contact">Contact</h:link>
+                    </li>
+                </ul>
 	        </div>
 	
-	        <div class="col-md-9">
+	        <div id="content" class="col-md-9">
 	            <ui:insert name="content">
 	              </ui:insert>
 	        </div>

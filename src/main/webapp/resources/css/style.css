@@ -2,28 +2,40 @@ html, body{
     height: 100%
 }
 
-div, section {
-    margin: 0px;
-    padding: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-#holder{
+#holder {
     min-height: 100%;
     position:relative;
+    background-color: lightyellow;
+
+    border: 1px solid black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
 }
 
-#main{
+#header {
+	padding-left: 15px;
+    clear: both;
+}
+
+#main {
     padding-bottom: 20px;    /* height of footer */
     min-height: 100%;
 }
 
-#sidemenu{
+#title {
+    margin-top: 0px;
+}
+
+#sidemenu {
     min-height: 100%;
 }
 
-footer{
+#content {
+    min-height: 100%;
+}
+
+#footer {
     height: 20px; 
     width:100%;
     position: absolute;
@@ -32,5 +44,6 @@ footer{
     text-align:right;
     line-height:14pt;
     font-size:11px;
-    color:#000000;
+    color: black;
+    border-top: 1px solid black;
 }
