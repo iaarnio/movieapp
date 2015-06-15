@@ -3,7 +3,7 @@ A simple movie cataloging application
 [![Build Status](https://travis-ci.org/iaarnio/movieapp.svg?branch=master)](https://travis-ci.org/iaarnio/movieapp)
 
 ## Demo 
-Live demo of the application is available at [https://movieapp-pilvi.rhcloud.com/index.jsf](https://movieapp-pilvi.rhcloud.com/index.jsf)
+Live demo of the application is available at [https://movieapp-pilvi.rhcloud.com/index.jsf](https://movieapp-pilvi.rhcloud.com/index.jsf)  
 (If it doesn't respond please wait a min and retry)
 
 ![Screenshot](misc/screenshot.jpg)
