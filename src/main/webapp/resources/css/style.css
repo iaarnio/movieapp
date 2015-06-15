@@ -19,7 +19,6 @@ html, body{
 }
 
 #main {
-    padding-bottom: 18px;
     min-height: 100%;
 }
 
@@ -36,14 +35,13 @@ html, body{
 }
 
 #footer {
-	height: 18px;
     width:100%;
     position: absolute;
     left: 0;
     bottom: 0; 
-    text-align:right;
-    line-height:14pt;
-    font-size:11px;
+    text-align: right;
+    line-height: 14pt;
+    font-size: 11px;
     color: black;
     border-top: 1px solid black;
 }
